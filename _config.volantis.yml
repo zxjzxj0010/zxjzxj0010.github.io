@@ -78,6 +78,8 @@ dns_prefetch:
 
 # 平滑滚动效果
 scroll_smooth: true
+
+
 ############################### Navigation Bar ############################### > start
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
@@ -102,6 +104,9 @@ navbar:
     - name: 友链
       icon: fa-solid fa-link
       url: friends/
+    - name: 网盘
+      icon: fa-solid fa-link
+      url: https://pan.knockblog.top/
     - name: 关于
       icon: fa-solid fa-info-circle
       url: about/
@@ -200,7 +205,7 @@ article:
       # 相关文章，需要安装插件 (for layout: post)
       # npm i hexo-related-popular-posts
       related_posts:
-        enable: false
+        enable: true
         title: 相关文章
         icon: fa-solid fa-bookmark
         max_count: 5
@@ -209,7 +214,7 @@ article:
       # ----------------
       # 版权声明组件 (for layout: post)
       copyright:
-        enable: false
+        enable: true
         permalink: '本文永久链接是：'
         content:
           - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
@@ -261,7 +266,7 @@ article:
       # https://volantis.js.org/advanced-settings/#多人协同
       author:
         avatar: volantis-static/media/org.volantis/blog/favicon/apple-touch-icon.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
-        name: 请设置文章作者
+        name: knock
         url: /
       # 文章创建日期
       date:
@@ -305,8 +310,8 @@ article:
           img: volantis-static/media/org.volantis/logo/128/weibo.png #  https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
         - id: # qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
           img: # volantis-static/media/org.volantis/logo/128/wechat.png #  https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
-        - id: # telegram
-          img: # volantis-static/media/org.volantis/logo/128/telegram.png #  https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
+        - id:  telegram
+          img: volantis-static/media/org.volantis/logo/128/telegram.png #  https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
 ############################### Article Layout ############################### > end
 
 
@@ -353,6 +358,14 @@ comments:
     # reactions-enabled: "1"
     # emit-metadata: "0"
     # lang: "zh-CN"
+    repo: "zxjzxj0010/giscusrepo"
+    repo-id: "R_kgDOJdKvig"
+    category: "Announcements"
+    category-id: "DIC_kwDOJdKvis4CWKIk"
+    mapping: "url"
+    reactions-enabled: "1"
+    emit-metadata: "0"
+    lang: "zh-CN"
     # 以上配置按照 yml 格式增删填写即可
     theme:
       light: "light" # https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css
@@ -579,21 +592,21 @@ sidebar:
           text: '文章数目：'
           unit: '篇'
         runtime:
-          enable: false
-          data: '2020/01/01'    # 填写建站日期
+          enable: true
+          data: '2023/05/01'    # 填写建站日期
           text: '已运行时间：'
           unit: '天'
         wordcount:
-          enable: false
+          enable: true
           text: '本站总字数：'   # 需要启用 wordcount
           unit: '字'
         visitcounter:
           siteuv:
-            enable: false
+            enable: true
             text: '本站访客数：'
             unit: '人'
           sitepv:
-            enable: false
+            enable: true
             text: '本站总访问量：'
             unit: '次'
         lastupd:
@@ -650,7 +663,7 @@ site_footer:
     <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
     <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   # site copyright
-  copyright: '[Copyright © since 2017 XXX](/)'
+  copyright: '[Copyright © since 2023 Knock](/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
 ############################### Site Footer ############################### > end
@@ -659,7 +672,7 @@ site_footer:
 plugins:
   ################ required plugins ################
   # jquery
-  globalJquery: false # 全局引入 jquery
+  globalJquery: true # 全局引入 jquery
   jquery: volantis-static/libs/jquery/dist/jquery.min.js # https://unpkg.com/jquery@3.6.0/dist/jquery.min.js
   # fontawesome Pro 版本：https://cdn.jsdelivr.net/gh/inkss/fontawesome@6.0.0/css/all.min.css
   fontawesome: volantis-static/libs/@fortawesome/fontawesome-free/css/all.min.css # https://unpkg.com/@fortawesome/fontawesome-free@6.1/css/all.min.css
@@ -1285,8 +1298,8 @@ custom_css:
 analytics:
   busuanzi: #volantis-static/libs/busuanzi/js/busuanzi.pure.mini.js #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
   leancloud: # 请使用自己的 id & key 以防止数据丢失
-    app_id: # u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI
-    app_key: # jfHtEKVE24j0IVCGHbvuFClp
+    app_id: u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI
+    app_key: jfHtEKVE24j0IVCGHbvuFClp
     custom_api_server: # 国际版一般不需要写，除非自定义了 API Server
 ############################### Analytics ############################### > end
 
