@@ -9,7 +9,7 @@ description: 'Knock博客'
 keywords: 'knockblog'
 author: knock
 language: zh-CN
-timezone: '+0800'
+timezone: '+08:00'
 favicon: https://pan.knockblog.top/api/raw/?path=/Public/image/logo/logo.ico
 
 # URL
