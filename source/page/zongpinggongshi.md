@@ -1,6 +1,6 @@
 ---
 layout: docs
-seo_title: 2023届报综合评价招生的信息公示
+title: 2023届报综合评价招生的信息公示
 bottom_meta: false
 ---
 
