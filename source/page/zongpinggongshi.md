@@ -1,7 +1,7 @@
 ---
-layout: docs
-seo_title: 2023届报综合评价招生的信息公示
-bottom_meta: false
+layout: page
+title: 2023届报综合评价招生的信息公示
+date: {2023-05-07}
 ---
 
 
